@@ -55,6 +55,7 @@ endif()
 # #########
 # LLVM
 # #########
+message("MLIR_DIR: ${MLIR_DIR}")
 if(NOT MLIR_DIR)
   if(NOT LLVM_LIBRARY_DIR)
     if(WIN32)
@@ -173,6 +174,7 @@ endif()
 # endif()
 
 # MLIR
+message("MLIR_DIR: ${MLIR_DIR}")
 find_package(MLIR REQUIRED CONFIG PATHS ${MLIR_DIR})
 
 list(APPEND CMAKE_MODULE_PATH "${MLIR_CMAKE_DIR}")
